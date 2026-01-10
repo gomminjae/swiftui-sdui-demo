@@ -1,0 +1,623 @@
+{
+  "screenKey": "home",
+  "schemaVersion": 1,
+  "screenVersion": 1,
+  "ttlSeconds": 120,
+  "navBar": {
+    "title": "Toss",
+    "prefersLargeTitle": false,
+    "leadingItems": null,
+    "trailingItems": [
+      {
+        "id": "notice",
+        "kind": "icon",
+        "title": null,
+        "sfSymbol": "bell",
+        "isEnabled": true,
+        "action": { "type": "navigate", "value": "app://notifications" },
+        "tdsComponent": "Button",
+        "tdsProps": {
+          "variant": "icon",
+          "asset": { "type": "icon", "name": "bell", "src": null },
+          "styleTokens": { "iconColor": "label.primary" }
+        }
+      },
+      {
+        "id": "settings",
+        "kind": "icon",
+        "title": null,
+        "sfSymbol": "gearshape",
+        "isEnabled": true,
+        "action": { "type": "navigate", "value": "app://settings" },
+        "tdsComponent": "Button",
+        "tdsProps": {
+          "variant": "icon",
+          "asset": { "type": "icon", "name": "gearshape", "src": null },
+          "styleTokens": { "iconColor": "label.primary" }
+        }
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "title": null,
+      "subtitle": null,
+      "tdsHeaderComponent": null,
+      "tdsHeaderProps": null,
+      "layout": null,
+      "items": [
+        {
+          "kind": "heroCard",
+          "data": {
+            "title": "오늘의 자산",
+            "subtitle": "토스뱅크 · 증권 · 포인트",
+            "amountText": "52,430,000원",
+            "accentText": "어제보다 +320,000원",
+            "backgroundGradient": ["#10131C", "#1C2635"],
+            "action": { "type": "navigate", "value": "app://asset/overview" },
+            "tdsComponent": "Top",
+            "tdsProps": {
+              "titleText": "오늘의 자산",
+              "subtitleText": "토스뱅크 · 증권 · 포인트",
+              "primaryText": "52,430,000원",
+              "secondaryText": "어제보다 +320,000원",
+              "background": { "type": "gradient", "colors": ["#10131C", "#1C2635"] },
+              "styleTokens": {
+                "titleColor": "label.inverseSecondary",
+                "subtitleColor": "label.inverseSecondary",
+                "primaryColor": "label.inversePrimary",
+                "secondaryColor": "semantic.positive",
+                "cornerRadius": "radius.l",
+                "padding": "spacing.l"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "quick-menu",
+      "type": "quickMenu",
+      "title": "자주 쓰는 기능",
+      "subtitle": null,
+      "tdsHeaderComponent": "ListHeader",
+      "tdsHeaderProps": {
+        "title": "자주 쓰는 기능",
+        "description": null,
+        "styleTokens": {
+          "titleColor": "label.primary",
+          "descriptionColor": "label.secondary"
+        }
+      },
+      "layout": {
+        "type": "grid",
+        "columns": 3,
+        "rowGap": 12,
+        "columnGap": 12,
+        "itemWidth": null,
+        "gap": null,
+        "rowGapToken": "spacing.m",
+        "columnGapToken": "spacing.m",
+        "gapToken": null,
+        "paddingToken": null
+      },
+      "items": [
+        {
+          "kind": "quickIcon",
+          "data": {
+            "title": "송금",
+            "iconURL": "https://static.appbuilder.dev/icons/toss-transfer.png",
+            "action": { "type": "navigate", "value": "app://transfer" },
+            "tdsComponent": "GridListItem",
+            "tdsProps": {
+              "label": "송금",
+              "asset": { "type": "image", "name": null, "src": "https://static.appbuilder.dev/icons/toss-transfer.png" },
+              "styleTokens": {
+                "labelColor": "label.primary",
+                "iconShape": "circle",
+                "tileBackground": "background.secondary",
+                "cornerRadius": "radius.m"
+              }
+            }
+          }
+        },
+        {
+          "kind": "quickIcon",
+          "data": {
+            "title": "카드",
+            "iconURL": "https://static.appbuilder.dev/icons/toss-card.png",
+            "action": { "type": "navigate", "value": "app://cards" },
+            "tdsComponent": "GridListItem",
+            "tdsProps": {
+              "label": "카드",
+              "asset": { "type": "image", "name": null, "src": "https://static.appbuilder.dev/icons/toss-card.png" },
+              "styleTokens": {
+                "labelColor": "label.primary",
+                "iconShape": "circle",
+                "tileBackground": "background.secondary",
+                "cornerRadius": "radius.m"
+              }
+            }
+          }
+        },
+        {
+          "kind": "quickIcon",
+          "data": {
+            "title": "투자",
+            "iconURL": "https://static.appbuilder.dev/icons/toss-invest.png",
+            "action": { "type": "navigate", "value": "app://invest" },
+            "tdsComponent": "GridListItem",
+            "tdsProps": {
+              "label": "투자",
+              "asset": { "type": "image", "name": null, "src": "https://static.appbuilder.dev/icons/toss-invest.png" },
+              "styleTokens": {
+                "labelColor": "label.primary",
+                "iconShape": "circle",
+                "tileBackground": "background.secondary",
+                "cornerRadius": "radius.m"
+              }
+            }
+          }
+        },
+        {
+          "kind": "quickIcon",
+          "data": {
+            "title": "대출",
+            "iconURL": "https://static.appbuilder.dev/icons/toss-loan.png",
+            "action": { "type": "navigate", "value": "app://loans" },
+            "tdsComponent": "GridListItem",
+            "tdsProps": {
+              "label": "대출",
+              "asset": { "type": "image", "name": null, "src": "https://static.appbuilder.dev/icons/toss-loan.png" },
+              "styleTokens": {
+                "labelColor": "label.primary",
+                "iconShape": "circle",
+                "tileBackground": "background.secondary",
+                "cornerRadius": "radius.m"
+              }
+            }
+          }
+        },
+        {
+          "kind": "quickIcon",
+          "data": {
+            "title": "보험",
+            "iconURL": "https://static.appbuilder.dev/icons/toss-insurance.png",
+            "action": { "type": "navigate", "value": "app://insurance" },
+            "tdsComponent": "GridListItem",
+            "tdsProps": {
+              "label": "보험",
+              "asset": { "type": "image", "name": null, "src": "https://static.appbuilder.dev/icons/toss-insurance.png" },
+              "styleTokens": {
+                "labelColor": "label.primary",
+                "iconShape": "circle",
+                "tileBackground": "background.secondary",
+                "cornerRadius": "radius.m"
+              }
+            }
+          }
+        },
+        {
+          "kind": "quickIcon",
+          "data": {
+            "title": "혜택",
+            "iconURL": "https://static.appbuilder.dev/icons/toss-benefit.png",
+            "action": { "type": "navigate", "value": "app://benefits" },
+            "tdsComponent": "GridListItem",
+            "tdsProps": {
+              "label": "혜택",
+              "asset": { "type": "image", "name": null, "src": "https://static.appbuilder.dev/icons/toss-benefit.png" },
+              "styleTokens": {
+                "labelColor": "label.primary",
+                "iconShape": "circle",
+                "tileBackground": "background.secondary",
+                "cornerRadius": "radius.m"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "benefit-cards",
+      "type": "benefit",
+      "title": "이번 주 혜택",
+      "subtitle": "토스가 골라 준 맞춤 혜택",
+      "tdsHeaderComponent": "ListHeader",
+      "tdsHeaderProps": {
+        "title": "이번 주 혜택",
+        "description": "토스가 골라 준 맞춤 혜택",
+        "styleTokens": {
+          "titleColor": "label.primary",
+          "descriptionColor": "label.secondary"
+        }
+      },
+      "layout": {
+        "type": "carousel",
+        "columns": null,
+        "rowGap": null,
+        "columnGap": null,
+        "itemWidth": 280,
+        "gap": 12,
+        "rowGapToken": null,
+        "columnGapToken": null,
+        "gapToken": "spacing.m",
+        "paddingToken": null
+      },
+      "items": [
+        {
+          "kind": "featureCard",
+          "data": {
+            "id": "benefit-1",
+            "title": "이번 주 카드 혜택",
+            "subtitle": "실적 채우고 1만P 받기",
+            "caption": "이번 주에만",
+            "iconName": "creditcard.fill",
+            "backgroundColor": "#1437B3",
+            "action": { "type": "navigate", "value": "app://benefit/card" },
+            "tdsComponent": "TopCard",
+            "tdsProps": {
+              "titleText": "이번 주 카드 혜택",
+              "subtitleText": "실적 채우고 1만P 받기",
+              "badgeText": "이번 주에만",
+              "leadingIcon": { "type": "icon", "name": "creditcard.fill", "src": null },
+              "background": { "type": "color", "color": "#1437B3" },
+              "styleTokens": {
+                "titleColor": "label.inversePrimary",
+                "subtitleColor": "label.inverseSecondary",
+                "badgeColor": "label.inversePrimary",
+                "cornerRadius": "radius.l",
+                "padding": "spacing.l"
+              }
+            }
+          }
+        },
+        {
+          "kind": "featureCard",
+          "data": {
+            "id": "benefit-2",
+            "title": "토스페이 결제 라운지",
+            "subtitle": "최대 5% 캐시백",
+            "caption": "오늘만",
+            "iconName": "sparkles",
+            "backgroundColor": "#1FA8FF",
+            "action": { "type": "navigate", "value": "app://benefit/pay" },
+            "tdsComponent": "TopCard",
+            "tdsProps": {
+              "titleText": "토스페이 결제 라운지",
+              "subtitleText": "최대 5% 캐시백",
+              "badgeText": "오늘만",
+              "leadingIcon": { "type": "icon", "name": "sparkles", "src": null },
+              "background": { "type": "color", "color": "#1FA8FF" },
+              "styleTokens": {
+                "titleColor": "label.inversePrimary",
+                "subtitleColor": "label.inverseSecondary",
+                "badgeColor": "label.inversePrimary",
+                "cornerRadius": "radius.l",
+                "padding": "spacing.l"
+              }
+            }
+          }
+        },
+        {
+          "kind": "featureCard",
+          "data": {
+            "id": "benefit-3",
+            "title": "친구 초대 미션",
+            "subtitle": "친구 1명 = 5,000P",
+            "caption": "3명까지",
+            "iconName": "person.2.fill",
+            "backgroundColor": "#2C2F3A",
+            "action": { "type": "navigate", "value": "app://benefit/invite" },
+            "tdsComponent": "TopCard",
+            "tdsProps": {
+              "titleText": "친구 초대 미션",
+              "subtitleText": "친구 1명 = 5,000P",
+              "badgeText": "3명까지",
+              "leadingIcon": { "type": "icon", "name": "person.2.fill", "src": null },
+              "background": { "type": "color", "color": "#2C2F3A" },
+              "styleTokens": {
+                "titleColor": "label.inversePrimary",
+                "subtitleColor": "label.inverseSecondary",
+                "badgeColor": "label.inversePrimary",
+                "cornerRadius": "radius.l",
+                "padding": "spacing.l"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "finance-cards",
+      "type": "finance",
+      "title": "나의 금융 현황",
+      "subtitle": null,
+      "tdsHeaderComponent": "ListHeader",
+      "tdsHeaderProps": {
+        "title": "나의 금융 현황",
+        "description": null,
+        "styleTokens": {
+          "titleColor": "label.primary",
+          "descriptionColor": "label.secondary"
+        }
+      },
+      "layout": {
+        "type": "stack",
+        "columns": null,
+        "rowGap": null,
+        "columnGap": null,
+        "itemWidth": null,
+        "gap": 8,
+        "rowGapToken": null,
+        "columnGapToken": null,
+        "gapToken": "spacing.s",
+        "paddingToken": null
+      },
+      "items": [
+        {
+          "kind": "financeCard",
+          "data": {
+            "id": "credit-score",
+            "title": "신용점수",
+            "valueText": "931점",
+            "description": "상위 5% | KCB",
+            "statusText": "12월 대비 +3점",
+            "accentColor": "#00C2FF",
+            "action": { "type": "navigate", "value": "app://credit-score" },
+            "tdsComponent": "ListRow",
+            "tdsProps": {
+              "contents": {
+                "title": "신용점수",
+                "description": "상위 5% | KCB",
+                "caption": "12월 대비 +3점"
+              },
+              "right": { "value": "931점", "chevron": true },
+              "accentColor": "#00C2FF",
+              "styleTokens": {
+                "titleColor": "label.primary",
+                "descriptionColor": "label.secondary",
+                "captionColor": "label.tertiary",
+                "rightValueColor": "label.primary",
+                "accentColor": "#00C2FF"
+              }
+            }
+          }
+        },
+        {
+          "kind": "financeCard",
+          "data": {
+            "id": "bank-account",
+            "title": "토스뱅크 통장",
+            "valueText": "12,430,000원",
+            "description": "입출금 통장",
+            "statusText": "오늘 +420,000원",
+            "accentColor": "#1FA8FF",
+            "action": { "type": "navigate", "value": "app://bank/account" },
+            "tdsComponent": "ListRow",
+            "tdsProps": {
+              "contents": {
+                "title": "토스뱅크 통장",
+                "description": "입출금 통장",
+                "caption": "오늘 +420,000원"
+              },
+              "right": { "value": "12,430,000원", "chevron": true },
+              "accentColor": "#1FA8FF",
+              "styleTokens": {
+                "titleColor": "label.primary",
+                "descriptionColor": "label.secondary",
+                "captionColor": "label.tertiary",
+                "rightValueColor": "label.primary",
+                "accentColor": "#1FA8FF"
+              }
+            }
+          }
+        },
+        {
+          "kind": "financeCard",
+          "data": {
+            "id": "loan-limit",
+            "title": "대출 한도",
+            "valueText": "최대 80,000,000원",
+            "description": "토스뱅크 대출",
+            "statusText": "한도 조회만으로 신용 영향 없음",
+            "accentColor": "#0E1726",
+            "action": { "type": "navigate", "value": "app://loan/estimate" },
+            "tdsComponent": "ListRow",
+            "tdsProps": {
+              "contents": {
+                "title": "대출 한도",
+                "description": "토스뱅크 대출",
+                "caption": "한도 조회만으로 신용 영향 없음"
+              },
+              "right": { "value": "최대 80,000,000원", "chevron": true },
+              "accentColor": "#0E1726",
+              "styleTokens": {
+                "titleColor": "label.primary",
+                "descriptionColor": "label.secondary",
+                "captionColor": "label.tertiary",
+                "rightValueColor": "label.primary",
+                "accentColor": "#0E1726"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "insights",
+      "type": "insight",
+      "title": "이번 달 리포트",
+      "subtitle": "소비와 고정비를 한눈에",
+      "tdsHeaderComponent": "ListHeader",
+      "tdsHeaderProps": {
+        "title": "이번 달 리포트",
+        "description": "소비와 고정비를 한눈에",
+        "styleTokens": {
+          "titleColor": "label.primary",
+          "descriptionColor": "label.secondary"
+        }
+      },
+      "layout": {
+        "type": "stack",
+        "columns": null,
+        "rowGap": null,
+        "columnGap": null,
+        "itemWidth": null,
+        "gap": 8,
+        "rowGapToken": null,
+        "columnGapToken": null,
+        "gapToken": "spacing.s",
+        "paddingToken": null
+      },
+      "items": [
+        {
+          "kind": "insight",
+          "data": {
+            "id": "fixed-cost",
+            "title": "이번 달 고정비 820,000원",
+            "description": "지난달보다 30,000원 늘었어요",
+            "accentText": "세부내역 보기",
+            "action": { "type": "navigate", "value": "app://insight/fixed-cost" },
+            "tdsComponent": "ListRow",
+            "tdsProps": {
+              "contents": {
+                "title": "이번 달 고정비 820,000원",
+                "description": "지난달보다 30,000원 늘었어요"
+              },
+              "right": { "label": "세부내역 보기", "chevron": true },
+              "styleTokens": {
+                "titleColor": "label.primary",
+                "descriptionColor": "label.secondary",
+                "rightLabelColor": "brand.primary"
+              }
+            }
+          }
+        },
+        {
+          "kind": "insight",
+          "data": {
+            "id": "card-usage",
+            "title": "카드 사용 1,250,000원",
+            "description": "지난주 대비 12% 감소",
+            "accentText": "카드별 보기",
+            "action": { "type": "navigate", "value": "app://insight/card" },
+            "tdsComponent": "ListRow",
+            "tdsProps": {
+              "contents": {
+                "title": "카드 사용 1,250,000원",
+                "description": "지난주 대비 12% 감소"
+              },
+              "right": { "label": "카드별 보기", "chevron": true },
+              "styleTokens": {
+                "titleColor": "label.primary",
+                "descriptionColor": "label.secondary",
+                "rightLabelColor": "brand.primary"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "banner",
+      "type": "banner",
+      "title": "알림",
+      "subtitle": "프로모션과 소식",
+      "tdsHeaderComponent": "ListHeader",
+      "tdsHeaderProps": {
+        "title": "알림",
+        "description": "프로모션과 소식",
+        "styleTokens": {
+          "titleColor": "label.primary",
+          "descriptionColor": "label.secondary"
+        }
+      },
+      "layout": {
+        "type": "stack",
+        "columns": null,
+        "rowGap": null,
+        "columnGap": null,
+        "itemWidth": null,
+        "gap": 8,
+        "rowGapToken": null,
+        "columnGapToken": null,
+        "gapToken": "spacing.s",
+        "paddingToken": null
+      },
+      "items": [
+        {
+          "kind": "banner",
+          "data": {
+            "imageURL": "https://static.appbuilder.dev/banners/toss-pay.png",
+            "title": "토스페이로 결제하면",
+            "subtitle": "편의점 2천원 즉시 할인",
+            "action": { "type": "openURL", "value": "https://appbuilder.dev/events/tosspay" },
+            "tdsComponent": "ListRow",
+            "tdsProps": {
+              "left": { "asset": { "type": "image", "name": null, "src": "https://static.appbuilder.dev/banners/toss-pay.png" } },
+              "contents": {
+                "title": "토스페이로 결제하면",
+                "description": "편의점 2천원 즉시 할인"
+              },
+              "right": { "chevron": true },
+              "styleTokens": {
+                "titleColor": "label.primary",
+                "descriptionColor": "label.secondary",
+                "imageCornerRadius": "radius.m"
+              }
+            }
+          }
+        },
+        {
+          "kind": "banner",
+          "data": {
+            "imageURL": "https://static.appbuilder.dev/banners/toss-savings.png",
+            "title": "토스뱅크 모으기",
+            "subtitle": "부담 없이 하루 1만원",
+            "action": { "type": "navigate", "value": "app://savings/challenge" },
+            "tdsComponent": "ListRow",
+            "tdsProps": {
+              "left": { "asset": { "type": "image", "name": null, "src": "https://static.appbuilder.dev/banners/toss-savings.png" } },
+              "contents": {
+                "title": "토스뱅크 모으기",
+                "description": "부담 없이 하루 1만원"
+              },
+              "right": { "chevron": true },
+              "styleTokens": {
+                "titleColor": "label.primary",
+                "descriptionColor": "label.secondary",
+                "imageCornerRadius": "radius.m"
+              }
+            }
+          }
+        },
+        {
+          "kind": "banner",
+          "data": {
+            "imageURL": "https://static.appbuilder.dev/banners/toss-life.png",
+            "title": "생활요금 자동 납부",
+            "subtitle": "5분 만에 모든 고지서 연결",
+            "action": { "type": "navigate", "value": "app://bills/setup" },
+            "tdsComponent": "ListRow",
+            "tdsProps": {
+              "left": { "asset": { "type": "image", "name": null, "src": "https://static.appbuilder.dev/banners/toss-life.png" } },
+              "contents": {
+                "title": "생활요금 자동 납부",
+                "description": "5분 만에 모든 고지서 연결"
+              },
+              "right": { "chevron": true },
+              "styleTokens": {
+                "titleColor": "label.primary",
+                "descriptionColor": "label.secondary",
+                "imageCornerRadius": "radius.m"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
