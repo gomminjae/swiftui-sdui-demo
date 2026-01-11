@@ -38,6 +38,7 @@
       }
     ]
   },
+  "backgroundColor": "#0F172A",
   "sections": [
     {
       "id": "hero",
